@@ -1,0 +1,21 @@
+.footer {
+    position: absolute;
+    background: white;
+    left: 0;
+    bottom: 0;
+    padding: rem(17px) 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.phone-number--theme--green {
+    color: #497870;
+}

@@ -1,0 +1,169 @@
+.slider {
+    background: #F8FAF9;
+    height: 100vh;
+    width: 100%;
+  
+    &__container {
+      
+      height: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  
+    &__item {
+      width: 100%;
+      height: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+
+      
+    }
+  
+    &__left {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      cursor: pointer;
+    }
+  
+    &__right {
+      transform: rotate(180deg);
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+  
+    &__list {
+      display: flex;
+      list-style: none;
+      height: 100%;
+      width: auto;
+      padding: 0;
+      margin: 0;
+      transition: .5s all ease-out;
+    }
+  
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+  
+      &-title {
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #292929;
+        margin-top: 6px;
+      }
+  
+      &-description{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+        margin-top: 24px;
+        max-width: 315px;
+      }
+    }
+  
+  
+  }
+  
+
+  .slider::before {
+    position: absolute;
+    bottom: -13.8888888889rem;
+    right: 1%;
+    content: url(../img/uzor25.svg);
+    z-index: 1;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  
+
+  .slider::after {
+    content: "";
+    display: flex;
+    width: 7.5rem;
+    height: 10.4444444444rem;
+    position: absolute;
+    bottom: -8.8888888889rem;
+    right: 2.5rem;
+    background: url(../img/uzor26.svg) no-repeat;
+    z-index: 1;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  .items {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  .item{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item__wrap {
+    display: flex;
+    
+    align-items: center;
+  }
+
+  .slider__slide {
+  @include tablets {
+    flex-direction: column;
+    }
+  }
+
+  .slider__slide-logo {
+    @include tablets {
+      max-width: 80%;
+      align-items: center;
+    }
+  }
+
+  .slider__description {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+  .slider__slide-description {
+  @include tablets {
+    padding: 0 5%;
+    max-width: 528px;
+    text-align: center;
+  }
+  }
+
+  .slider__logo {
+    @include tablets {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .slider__slide-title {
+    @include phones {
+      font-size: 24px;
+      text-align: center;
+    }
+  }

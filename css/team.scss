@@ -1,0 +1,87 @@
+.team__name {
+    margin-top: 67px;
+}
+
+.team__item {
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    max-width: 14.44444rem;
+    position: relative;
+  
+}
+
+.team__member {
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.team__title {
+    color: black;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 0;
+    outline: none;
+
+
+    &:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        display: flex;
+        background: url("../img/Polygon\ 1456.svg") no-repeat;
+        margin-left: 5px;
+    }
+
+}
+
+
+
+
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s ;
+    height: 0;
+}
+
+.team__content-block {
+    padding-bottom: 5px;
+}
+
+.team{
+    &--verison--desktop {
+        display: flex;
+
+        @include tablets {
+            display: none;
+        }
+    }
+}
+
+.team{
+    &--verison--mobile {
+        display: none;
+
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.team__content-pos {
+    font-weight: bold;
+}
+
+
+.team .active .team__title:after {
+    transform: rotate(-180deg);
+}

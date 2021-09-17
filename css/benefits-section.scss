@@ -1,0 +1,24 @@
+.benefits-section {
+    position: relative;
+    background: url('../img/uzorlist.png') left top 57% no-repeat;
+
+    @include tablets {
+        background: url('../img/uzorlist.png') left top rem(84px) no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url('../img/malina.png');
+        position: absolute;
+        bottom: rem(-80px);
+        left: 0;
+        z-index: 1;
+        
+        @include phones {
+            display: none;
+        }
+    }  
+}

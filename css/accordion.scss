@@ -1,0 +1,28 @@
+.accordion {
+    background: url("../img/fon2.png") center center /cover no-repeat;
+  
+    &__container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      
+      justify-content: flex-end;
+    }
+  
+    &__slide {
+      &-title {
+        
+        font-weight: bold;
+        font-size: 48px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+  
+       
+      }
+  
+      
+    }
+  }
